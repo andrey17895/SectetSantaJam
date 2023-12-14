@@ -1,57 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://df77mo1omopqi"]
+[gd_scene load_steps=4 format=3 uid="uid://df77mo1omopqi"]
 
 [ext_resource type="Script" path="res://platformer_controller/platformer_controller.gd" id="1_wrtet"]
-[ext_resource type="Texture2D" uid="uid://di5a1pv5iuup3" path="res://icon.png" id="2_ocvxj"]
-[ext_resource type="Texture2D" uid="uid://bfann3ddoo18m" path="res://assets/star_sprite.png" id="3_ba3ok"]
+[ext_resource type="SpriteFrames" uid="uid://y5psorpgdnqf" path="res://star_animations.tres" id="3_hcvrk"]
 
 [sub_resource type="RectangleShape2D" id="4"]
 size = Vector2(41.6667, 63.3333)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8i1bu"]
-atlas = ExtResource("3_ba3ok")
-region = Rect2(200, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6uy3v"]
-atlas = ExtResource("3_ba3ok")
-region = Rect2(0, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8no46"]
-atlas = ExtResource("3_ba3ok")
-region = Rect2(100, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lv7ll"]
-atlas = ExtResource("3_ba3ok")
-region = Rect2(0, 0, 100, 100)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_lc0ow"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8i1bu")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6uy3v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8no46")
-}],
-"loop": true,
-"name": &"run",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lv7ll")
-}],
-"loop": true,
-"name": &"stand",
-"speed": 5.0
-}]
 
 [node name="PlatformerController2D" type="CharacterBody2D"]
 scale = Vector2(0.6, 0.6)
@@ -67,10 +20,6 @@ max_jump_amount = 2
 coyote_time = 0.2
 jump_buffer = 0.2
 
-[node name="icon" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("2_ocvxj")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 9.56158e-07)
 shape = SubResource("4")
@@ -78,5 +27,5 @@ shape = SubResource("4")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3.33333, 1.66667)
 scale = Vector2(0.745833, 0.745833)
-sprite_frames = SubResource("SpriteFrames_lc0ow")
+sprite_frames = ExtResource("3_hcvrk")
 animation = &"stand"
