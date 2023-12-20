@@ -4,9 +4,9 @@
 [ext_resource type="SpriteFrames" uid="uid://y5psorpgdnqf" path="res://star_animations.tres" id="3_hcvrk"]
 
 [sub_resource type="RectangleShape2D" id="4"]
-size = Vector2(41.6667, 63.3333)
+size = Vector2(40, 66.6667)
 
-[node name="PlatformerController2D" type="CharacterBody2D"]
+[node name="StarController" type="CharacterBody2D"]
 scale = Vector2(0.6, 0.6)
 collision_layer = 2
 script = ExtResource("1_wrtet")
@@ -17,11 +17,12 @@ max_jump_height = 200.0
 min_jump_height = 120.0
 double_jump_height = 150.0
 max_jump_amount = 2
+max_acceleration = 7000
 coyote_time = 0.2
 jump_buffer = 0.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.5, 9.56158e-07)
+position = Vector2(-1.66667, 1.58946e-06)
 shape = SubResource("4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

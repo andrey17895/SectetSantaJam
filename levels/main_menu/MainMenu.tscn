@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://iaq03ydn5nn"]
+
+[ext_resource type="Script" path="res://levels/main_menu/MainMenu.gd" id="1_nscpt"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_nscpt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 109.0
+offset_top = 232.0
+offset_right = 583.0
+offset_bottom = 298.0
+size_flags_vertical = 6
+
+[node name="NewGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "New game"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

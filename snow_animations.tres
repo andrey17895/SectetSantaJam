@@ -1,0 +1,45 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://dvd672dlxnhb1"]
+
+[ext_resource type="Texture2D" uid="uid://b7a7em8kpv0cs" path="res://assets/snow_sprite.png" id="1_qec61"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw5ov"]
+atlas = ExtResource("1_qec61")
+region = Rect2(280, 0, 140, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhvbt"]
+atlas = ExtResource("1_qec61")
+region = Rect2(0, 0, 140, 170)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6w65"]
+atlas = ExtResource("1_qec61")
+region = Rect2(140, 0, 140, 170)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw5ov")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhvbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6w65")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhvbt")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}]

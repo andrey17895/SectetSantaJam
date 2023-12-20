@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://dylftujs5uqut"]
 
-[ext_resource type="Script" path="res://gate.gd" id="1_lg8ah"]
+[ext_resource type="Script" path="res://level_elements/gate.gd" id="1_yjutn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xcrt"]
 size = Vector2(22, 202)
 
 [node name="Gate" type="Node2D"]
-script = ExtResource("1_lg8ah")
+script = ExtResource("1_yjutn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 rotation = 1.5708

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0lq7k13yq5nl"]
+
+[ext_resource type="Script" path="res://common/music_player.gd" id="1_c1w2b"]
+
+[node name="MusicPlayer" type="Node"]
+script = ExtResource("1_c1w2b")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
+autoplay = true

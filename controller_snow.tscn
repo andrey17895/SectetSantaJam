@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cib36lx8lqqn"]
+
+[ext_resource type="PackedScene" uid="uid://df77mo1omopqi" path="res://platformer_controller_2d.tscn" id="1_mop1y"]
+[ext_resource type="SpriteFrames" uid="uid://dvd672dlxnhb1" path="res://snow_animations.tres" id="2_iy2js"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dw3gw"]
+size = Vector2(84.1667, 123.333)
+
+[node name="SnowController" instance=ExtResource("1_mop1y")]
+input_left = "p2_left"
+input_right = "p2_right"
+input_jump = "p2_up"
+max_jump_height = 110.0
+jump_duration = 0.25
+max_jump_amount = 1
+max_acceleration = 6000
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-3.33333, 0.833333)
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = ExtResource("2_iy2js")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(-2.08333, 1.66667)
+shape = SubResource("RectangleShape2D_dw3gw")
